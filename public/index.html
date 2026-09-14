@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel South Morocco MVP</title>
+    <meta name="description" content="MVP prototype voor halal/non-alcoholische reizen naar Zuid-Marokko" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="brand">Travel South Morocco</h1>
+      <p id="subtitle"></p>
+      <div class="controls">
+        <label>
+          Taal
+          <select id="langSelect">
+            <option value="nl">Nederlands</option>
+            <option value="en">English</option>
+          </select>
+        </label>
+        <label>
+          Rol
+          <select id="roleSelect">
+            <option value="customer">Klant</option>
+            <option value="employee">Medewerker</option>
+            <option value="admin">Beheerder</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel" id="marketingPanel">
+        <h2 id="packagesTitle"></h2>
+        <div id="packages"></div>
+        <h3 id="testimonialsTitle"></h3>
+        <ul id="testimonials"></ul>
+      </section>
+
+      <section class="panel" id="customerPanel">
+        <h2 id="bookingTitle"></h2>
+        <form id="bookingForm">
+          <input id="name" placeholder="Naam" required />
+          <input id="email" placeholder="E-mail" type="email" required />
+          <input id="phone" placeholder="Telefoon" required />
+          <select id="packageId"></select>
+          <input id="participants" type="number" min="1" value="1" />
+          <input id="diet" placeholder="Dieetwens" />
+          <button type="submit" id="bookBtn"></button>
+        </form>
+
+        <div class="status-grid">
+          <article>
+            <h3 id="paymentsTitle"></h3>
+            <div id="payments"></div>
+          </article>
+          <article>
+            <h3 id="itineraryTitle"></h3>
+            <ul id="itinerary"></ul>
+          </article>
+          <article>
+            <h3 id="emergencyTitle"></h3>
+            <p id="emergency"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="adminPanel">
+        <h2 id="adminTitle"></h2>
+
+        <div class="admin-grid">
+          <article>
+            <h3 id="crmTitle"></h3>
+            <ul id="customers"></ul>
+          </article>
+
+          <article>
+            <h3 id="bookingsAdminTitle"></h3>
+            <ul id="bookings"></ul>
+          </article>
+
+          <article>
+            <h3 id="roomsTitle"></h3>
+            <ul id="rooms"></ul>
+          </article>
+
+          <article>
+            <h3 id="planningTitle"></h3>
+            <form id="planningForm">
+              <input id="planningBookingId" placeholder="Booking ID" required />
+              <input id="planningDay" type="number" min="1" placeholder="Dag" required />
+              <input id="planningActivity" placeholder="Activiteit" required />
+              <input id="planningGuide" placeholder="Gids" required />
+              <input id="planningDriver" placeholder="Chauffeur" required />
+              <button type="submit" id="planningBtn"></button>
+            </form>
+          </article>
+
+          <article>
+            <h3 id="incidentTitle"></h3>
+            <form id="incidentForm">
+              <input id="incidentBookingId" placeholder="Booking ID" required />
+              <select id="incidentSeverity">
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+              </select>
+              <input id="incidentSummary" placeholder="Samenvatting" required />
+              <input id="incidentAction" placeholder="Actie" required />
+              <button type="submit" id="incidentBtn"></button>
+            </form>
+            <ul id="incidents"></ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

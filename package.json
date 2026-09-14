@@ -1,0 +1,10 @@
+{
+  "name": "travel-south-morocco-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MVP prototype for Travel South Morocco",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

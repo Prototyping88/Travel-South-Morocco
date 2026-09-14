@@ -1,29 +1,34 @@
-# Travel South Morocco – Digitale Applicatie
+# Travel South Morocco – Digitale Applicatie Prototype
 
-**Reisbureau-constructie Marrakech/Europa**: verblijf, trips en evenementen, non-alcoholisch/non-haram, met volledige logistieke ontzorging.
+Prototype voor een reisbureau-constructie (Marrakech + Europa) met focus op Pilot-features.
+
+## Starten
+
+```bash
+npm start
+```
+
+Open daarna `http://localhost:3000`.
+
+## Wat zit in dit prototype
+
+- **Klantkant**
+  - Pakketten bekijken
+  - Boeking aanvragen
+  - Aanbetaling/restbetaling status
+  - Reisschema en noodnummer inzien
+- **Beheerkant** (rol: medewerker/beheerder)
+  - Klantbeheer en boekingsbeheer
+  - Kamerbeheer riad
+  - Reisschema koppelen aan gids/chauffeur
+  - Calamiteitenregistratie
+- **Cross-cutting**
+  - Basis meertaligheid (NL/EN)
+  - Basis rollen (customer/employee/admin)
 
 ## Structuur
 
-Dit project is ingedeeld in fases:
-
-1. **Fase 1: Architectuur** → `06-digitaal-plan/01-architectuur.md`
-   - Technische stack
-   - Datamodel
-   - Modulestructuur
-   - API-interfaces
-   - Niet-functionele eisen
-
-2. **Fase 2: Prototype (MVP)** → `06-digitaal-plan/02-lovable-prompt.md`
-   - Implementatie via Lovable (LLM-gestuurde development)
-   - Pilot-features uit functioneringentabel
-   - Klantkant en beheerkant
-
-3. **Ondersteuning**
-   - `06-digitaal-plan/functionaliteiten-overzicht.md` — Volledig feature-matrix (Pilot vs. Opschaling)
-   - `06-digitaal-plan/ai-bouwprompts.md` — Deze twee prompts, kant-en-klaar voor Copilot en Lovable
-
-## Volgende stappen
-
-1. Valideer de architectuur (Fase 1)
-2. Bouw MVP via Lovable (Fase 2)
-3. Breid uit met Opschaling-features
+- `server.js` — eenvoudige Node HTTP API + static hosting
+- `data/db.json` — prototype data-opslag (JSON)
+- `public/` — frontend (HTML/CSS/JS)
+- `06-digitaal-plan/` — architectuur- en promptdocumenten

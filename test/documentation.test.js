@@ -30,20 +30,29 @@ test('documentation deliverables exist at repository root', () => {
 test('README describes the South Morocco travel-planning focus and linked docs', () => {
   const readme = normalize(read('README.md'));
 
-  for (const commandOrEndpointPattern of [
+  for (const commandPattern of [
     /npm start/i,
-    /npm test/i,
-    /\/api\/health/i,
-    /\/api\/packages/i,
-    /\/api\/testimonials/i,
-    /\/api\/social-links/i,
-    /\/api\/customers/i,
-    /\/api\/bookings/i,
-    /\/api\/rooms/i,
-    /\/api\/services/i,
-    /\/api\/incidents/i
+    /npm test/i
   ]) {
-    assert.match(readme, commandOrEndpointPattern);
+    assert.match(readme, commandPattern);
+  }
+
+  for (const apiPattern of [
+    /get `?\/api\/health`?/i,
+    /get `?\/api\/packages`?/i,
+    /get `?\/api\/testimonials`?/i,
+    /get `?\/api\/social-links`?/i,
+    /get `?\/api\/customers`?/i,
+    /post `?\/api\/customers`?/i,
+    /get `?\/api\/bookings`?/i,
+    /post `?\/api\/bookings`?/i,
+    /patch `?\/api\/bookings\/:id`?/i,
+    /get `?\/api\/rooms`?/i,
+    /patch `?\/api\/rooms\/:id`?/i,
+    /get `?\/api\/services`?/i,
+    /post `?\/api\/incidents`?/i
+  ]) {
+    assert.match(readme, apiPattern);
   }
 
   for (const topicPattern of [

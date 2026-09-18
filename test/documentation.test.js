@@ -56,13 +56,13 @@ test('README describes the South Morocco travel-planning focus and linked docs',
   }
 
   for (const topicPattern of [
-    /(itinerary|reisschema)/,
-    /(accommodation|verblijf|riad)/,
-    /(historical site|historical sites|historische|plekken)/,
-    /(guide|gids)/,
-    /(weather|season|seizoen)/,
-    /(currency|kosten|budget|mad|eur)/,
-    /(cultural|cultuur|voorbereiding)/
+    /(itinerary|reisschema)/i,
+    /(accommodation|verblijf|riad)/i,
+    /(historical site|historical sites|historische|plekken)/i,
+    /(guide|gids)/i,
+    /(weather|season|seizoen)/i,
+    /(currency|kosten|budget|mad|eur)/i,
+    /(cultural|cultuur|voorbereiding)/i
   ]) {
     assert.match(readme, topicPattern);
   }

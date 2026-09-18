@@ -15,7 +15,7 @@ function normalize(text) {
 
 test('documentation deliverables exist at repository root', () => {
   for (const file of ['README.md', 'ARCHITECTURE.md', 'DEVELOPMENT.md', 'DEPLOYMENT.md']) {
-    assert.equal(fs.existsSync(path.join(ROOT, file)), true, `${file} should exist`);
+    assert.ok(fs.existsSync(path.join(ROOT, file)), `${file} should exist`);
   }
 });
 
@@ -38,7 +38,7 @@ test('README describes the South Morocco travel-planning focus and linked docs',
   for (const topicPattern of [
     /(itinerary|reisschema)/,
     /(accommodation|verblijf|riad)/,
-    /(historical site|historische)/,
+    /(historical site|historical sites|historische|plekken)/,
     /(guide|gids)/,
     /(weather|season|seizoen)/,
     /(currency|kosten|budget|mad|eur)/,

@@ -35,13 +35,17 @@ test('README describes the South Morocco travel-planning focus and linked docs',
     assert.ok(readme.includes(marker), `README should contain marker: ${marker}`);
   }
 
-  assert.match(readme, /(itinerary|reisschema)/);
-  assert.match(readme, /(accommodation|verblijf|riad)/);
-  assert.match(readme, /(historical site|historische)/);
-  assert.match(readme, /(guide|gids)/);
-  assert.match(readme, /(weather|season|seizoen)/);
-  assert.match(readme, /(currency|kosten|budget|mad|eur)/);
-  assert.match(readme, /(cultural|cultuur|voorbereiding)/);
+  for (const topicPattern of [
+    /(itinerary|reisschema)/,
+    /(accommodation|verblijf|riad)/,
+    /(historical site|historische)/,
+    /(guide|gids)/,
+    /(weather|season|seizoen)/,
+    /(currency|kosten|budget|mad|eur)/,
+    /(cultural|cultuur|voorbereiding)/
+  ]) {
+    assert.match(readme, topicPattern);
+  }
 
   assert.ok(readme.includes('architecture.md'));
   assert.ok(readme.includes('development.md'));

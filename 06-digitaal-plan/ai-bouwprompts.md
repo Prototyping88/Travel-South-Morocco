@@ -1,4 +1,4 @@
-Twee prompts, voor de twee stappen die je noemt:
+Twee AI-prompts voor de gefaseerde uitwerking van het digitale traject.
 
 ## Stap 1 — voor GitHub Copilot (architectuur)
 
@@ -57,4 +57,4 @@ boekhoudkoppeling).
 Volg voor het datamodel en de modulestructuur de architectuur uit de vorige fase.
 ```
 
-De knip tussen Pilot en Opschaling uit de tabel bepaalt bewust de scope van de Lovable-prompt, zodat het eerste prototype behapbaar blijft. Opgeslagen als **06-digitaal-plan/ai-bouwprompts.md**.
+De knip tussen Pilot en Opschaling bepaalt bewust de scope van de Lovable-prompt, zodat het eerste prototype behapbaar blijft.

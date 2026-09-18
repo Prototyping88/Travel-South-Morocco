@@ -1,4 +1,4 @@
-Hier is de tabel, gegroepeerd naar de zes gebieden die je noemde, met een fase-indicatie (Pilot = snel op te zetten, Opschaling = pas nodig bij groter volume):
+Overzicht van functionaliteiten, gegroepeerd naar zes domeinen met fase-indicatie (Pilot = snel op te zetten, Opschaling = pas nodig bij groter volume).
 
 ## 1. Online reclame & marketing
 
@@ -69,6 +69,4 @@ Hier is de tabel, gegroepeerd naar de zes gebieden die je noemde, met een fase-i
 | Verzekeringsregistratie per boeking | Welke verzekering bij welke boeking | Opschaling |
 | Leveranciersbeheer | Contracten, tarieven, beoordelingen | Opschaling |
 
-Daarnaast een dwarsdoorsnede-laag (rollen/rechten, AVG, dashboard/rapportage, boekhoudkoppeling) die niet bij één categorie hoort maar overal onder ligt.
-
-Ik heb dit opgeslagen als **06-digitaal-plan/functionaliteiten-overzicht.md**, gekoppeld aan het digitaal plan en het actie-overzicht (de softwarekeuze en het budget die hier uit voortvloeien stonden al als openstaande punten G en H).
+Daarnaast is er een dwarsdoorsnede-laag (rollen/rechten, AVG, dashboard/rapportage, boekhoudkoppeling) die niet bij één categorie hoort maar over alle categorieën heen loopt.

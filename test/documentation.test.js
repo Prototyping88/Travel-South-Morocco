@@ -79,7 +79,7 @@ test('architecture and developer docs retain Course2Go translation context', () 
 
   assert.match(architecture, /course2go/i);
   assert.match(architecture, /(reisdossier|dossier)/i);
-  assert.match(architecture, /(api-oppervlak|api-interfaces|api)/i);
+  assert.match(architecture, /(api-oppervlak|api-interfaces)/i);
   for (const linkedDoc of ['README.md', 'DEVELOPMENT.md', 'DEPLOYMENT.md']) {
     assert.match(architecture, markdownLinkPattern(linkedDoc));
   }

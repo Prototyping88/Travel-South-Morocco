@@ -1,4 +1,4 @@
-# Travel-South-Morocco
+# Travel-South-Morocco (Marrakech Passion)
 
 Documentatierepository voor de opzet van Marrakech Passion, met focus op dienstverlening, digitaal plan en commerciële uitwerking.
 

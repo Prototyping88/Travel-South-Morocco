@@ -93,7 +93,7 @@ test('architecture and developer docs retain Course2Go translation context', () 
     assert.match(development, markdownLinkPattern(linkedDoc));
   }
   assert.match(deployment, /(productie|deployment|hosting)/i);
-  for (const deploymentDeliverable of [/fase a/i, /fase b/i, /fase c/i, /reverse proxy/i, /tls/i, /releaseworkflow/i]) {
+  for (const deploymentDeliverable of [/fase a/i, /fase b/i, /fase c/i, /reverse proxy/i, /tls/i, /release\s*workflow/i]) {
     assert.match(deployment, deploymentDeliverable);
   }
   for (const linkedDoc of ['README.md', 'ARCHITECTURE.md', 'DEVELOPMENT.md']) {

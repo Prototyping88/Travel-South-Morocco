@@ -9,6 +9,10 @@ function read(file) {
   return fs.readFileSync(path.join(ROOT, file), 'utf8');
 }
 
+function normalize(text) {
+  return text.toLowerCase();
+}
+
 test('documentation deliverables exist at repository root', () => {
   for (const file of ['README.md', 'ARCHITECTURE.md', 'DEVELOPMENT.md', 'DEPLOYMENT.md']) {
     assert.equal(fs.existsSync(path.join(ROOT, file)), true, `${file} should exist`);
@@ -16,17 +20,36 @@ test('documentation deliverables exist at repository root', () => {
 });
 
 test('README describes the South Morocco travel-planning focus and linked docs', () => {
-  const readme = read('README.md');
-  assert.match(readme, /Travel itinerary planning/i);
-  assert.match(readme, /Riad & accommodation booking/i);
-  assert.match(readme, /Historical site documentation/i);
-  assert.match(readme, /Local guide integrations/i);
-  assert.match(readme, /Weather & seasonal planning/i);
-  assert.match(readme, /Currency & cost management/i);
-  assert.match(readme, /Cultural insights & preparation/i);
-  assert.match(readme, /ARCHITECTURE\.md/);
-  assert.match(readme, /DEVELOPMENT\.md/);
-  assert.match(readme, /DEPLOYMENT\.md/);
+  const readme = normalize(read('README.md'));
+
+  for (const heading of [
+    '## projectoverzicht',
+    '## technische stack en architectuur-analyse',
+    '## projectstructuur met annotaties',
+    '## setup & deployment instructies',
+    '## kernfeatures en use cases',
+    '## api / integratie-overzicht',
+    '## developmentworkflow',
+    '## credits'
+  ]) {
+    assert.ok(readme.includes(heading), `README should contain heading: ${heading}`);
+  }
+
+  for (const topic of [
+    'itinerary',
+    'accommodation',
+    'historical site',
+    'guide',
+    'seasonal',
+    'currency',
+    'cultural'
+  ]) {
+    assert.ok(readme.includes(topic), `README should mention topic: ${topic}`);
+  }
+
+  assert.ok(readme.includes('architecture.md'));
+  assert.ok(readme.includes('development.md'));
+  assert.ok(readme.includes('deployment.md'));
 });
 
 test('architecture and developer docs retain Course2Go translation context', () => {

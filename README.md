@@ -66,7 +66,7 @@ Zie voor diepgaande details [`ARCHITECTURE.md`](./ARCHITECTURE.md).
 ## Projectstructuur met annotaties
 
 ```text
-/home/runner/work/Travel-South-Morocco/Travel-South-Morocco
+.
 ├── README.md                 # Hoofdoverzicht, analyse, setup en links naar documentatie
 ├── ARCHITECTURE.md           # Diepgaande technische architectuur en vertaalslag vanuit Course2Go
 ├── DEVELOPMENT.md            # Developer workflow, API-richtlijnen, testen en bijdrage-afspraken

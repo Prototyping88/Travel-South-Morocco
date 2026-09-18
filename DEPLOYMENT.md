@@ -133,6 +133,8 @@ Voor dit platform zijn extra relevant:
 
 ## 11. Relatie met andere documentatie
 
+Deze deploymentaanpak ondersteunt ook de langere productgroei van een compact prototype naar een meer workspace-gedreven architectuur, in lijn met de conceptuele vertaalslag vanuit Course2Go.
+
 - product en scope: [`README.md`](./README.md)
 - technische diepgang: [`ARCHITECTURE.md`](./ARCHITECTURE.md)
 - developer workflow: [`DEVELOPMENT.md`](./DEVELOPMENT.md)

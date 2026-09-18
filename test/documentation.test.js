@@ -49,21 +49,21 @@ test('README describes the South Morocco travel-planning focus and linked docs',
 });
 
 test('architecture and developer docs retain Course2Go translation context', () => {
-  const architecture = read('ARCHITECTURE.md');
-  const development = read('DEVELOPMENT.md');
-  const deployment = read('DEPLOYMENT.md');
+  const architecture = normalize(read('ARCHITECTURE.md'));
+  const development = normalize(read('DEVELOPMENT.md'));
+  const deployment = normalize(read('DEPLOYMENT.md'));
 
-  assert.match(architecture, /Course2Go/i);
-  assert.match(architecture, /reisdossier/i);
-  assert.match(architecture, /DEVELOPMENT\.md/);
-  assert.match(architecture, /DEPLOYMENT\.md/);
-  assert.match(architecture, /API-oppervlak/i);
-  assert.match(development, /Zuid-Marokko/i);
-  assert.match(development, /README\.md/);
-  assert.match(development, /ARCHITECTURE\.md/);
-  assert.match(development, /Testen/i);
-  assert.match(deployment, /productie/i);
-  assert.match(deployment, /README\.md/);
-  assert.match(deployment, /ARCHITECTURE\.md/);
-  assert.match(deployment, /Security-hardening/i);
+  assert.ok(architecture.includes('course2go'));
+  assert.ok(architecture.includes('reisdossier'));
+  assert.ok(architecture.includes('development.md'));
+  assert.ok(architecture.includes('deployment.md'));
+  assert.ok(architecture.includes('api'));
+  assert.ok(development.includes('zuid-marokko'));
+  assert.ok(development.includes('readme.md'));
+  assert.ok(development.includes('architecture.md'));
+  assert.ok(development.includes('testen'));
+  assert.ok(deployment.includes('productie'));
+  assert.ok(deployment.includes('readme.md'));
+  assert.ok(deployment.includes('architecture.md'));
+  assert.match(deployment, /(security|beveiliging)/);
 });

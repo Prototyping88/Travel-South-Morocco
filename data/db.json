@@ -1,0 +1,180 @@
+{
+  "marketing": {
+    "testimonials": [
+      {
+        "id": "t1",
+        "author": "Familie El Idrissi",
+        "message": "Perfect geregeld van aankomst tot vertrek."
+      },
+      {
+        "id": "t2",
+        "author": "Team Rotterdam",
+        "message": "Betrouwbaar, halal-vriendelijk en persoonlijk."
+      }
+    ],
+    "socialLinks": {
+      "instagram": "https://instagram.com",
+      "facebook": "https://facebook.com"
+    }
+  },
+  "packages": [
+    {
+      "id": "pkg-riad-sahara",
+      "title": {
+        "nl": "Riad & Sahara Beleving",
+        "en": "Riad & Sahara Experience"
+      },
+      "destination": "Marrakech + Merzouga",
+      "days": 6,
+      "pricePerPerson": 890,
+      "includes": [
+        "Riad verblijf",
+        "Transfer",
+        "Gids",
+        "Evenementenopties"
+      ]
+    },
+    {
+      "id": "pkg-culture-family",
+      "title": {
+        "nl": "Culturele Familie Reis",
+        "en": "Cultural Family Journey"
+      },
+      "destination": "Marrakech + Atlas",
+      "days": 5,
+      "pricePerPerson": 740,
+      "includes": [
+        "Riad verblijf",
+        "Familietrips",
+        "Historische gids"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Eigenaar",
+      "role": "admin"
+    },
+    {
+      "id": "u2",
+      "name": "Planner",
+      "role": "employee"
+    }
+  ],
+  "customers": [
+    {
+      "id": "c1",
+      "name": "Amina de Vries",
+      "email": "amina@example.com",
+      "phone": "+31 6 12345678",
+      "preferences": [
+        "non-alcoholisch"
+      ],
+      "diet": "halal",
+      "communicationHistory": [
+        {
+          "channel": "email",
+          "note": "Aanvraag familiepakket ontvangen",
+          "at": "2026-09-10T09:30:00Z"
+        }
+      ],
+      "feedback": []
+    }
+  ],
+  "rooms": [
+    {
+      "id": "r1",
+      "name": "Atlas Suite",
+      "pricePerNight": 110,
+      "available": true
+    },
+    {
+      "id": "r2",
+      "name": "Sahara Kamer",
+      "pricePerNight": 85,
+      "available": true
+    },
+    {
+      "id": "r3",
+      "name": "Patio Family Room",
+      "pricePerNight": 130,
+      "available": false
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b1",
+      "customerId": "c1",
+      "packageId": "pkg-riad-sahara",
+      "participants": 2,
+      "status": "confirmed",
+      "createdAt": "2026-09-11T10:15:00Z",
+      "roomIds": [
+        "r1"
+      ],
+      "emergencyNumber": "+212 600 000 111",
+      "cancellationPolicy": "Tot 14 dagen voor vertrek kosteloos wijzigen.",
+      "payments": {
+        "depositAmount": 300,
+        "depositPaid": true,
+        "remainingAmount": 1480,
+        "remainingPaid": false
+      },
+      "vouchers": [
+        {
+          "id": "v1",
+          "type": "desert-trip",
+          "status": "issued"
+        }
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "activity": "Aankomst + transfer naar riad",
+          "guide": "Youssef",
+          "driver": "Khalid"
+        },
+        {
+          "day": 2,
+          "activity": "Marrakech medina tour",
+          "guide": "Sara",
+          "driver": "N/A"
+        }
+      ],
+      "changeLog": [
+        {
+          "at": "2026-09-12T12:00:00Z",
+          "note": "Transfer tijd aangepast op verzoek klant"
+        }
+      ]
+    }
+  ],
+  "transports": [
+    {
+      "id": "tr1",
+      "bookingId": "b1",
+      "driver": "Khalid",
+      "vehicle": "Van 8p",
+      "route": "Airport -> Riad"
+    }
+  ],
+  "guides": [
+    {
+      "id": "g1",
+      "bookingId": "b1",
+      "name": "Youssef",
+      "specialty": "Historie"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "i1",
+      "bookingId": "b1",
+      "severity": "medium",
+      "summary": "Vertraging bij transfer",
+      "action": "Alternatieve chauffeur ingezet",
+      "contactNumber": "+212 600 000 111"
+    }
+  ]
+}

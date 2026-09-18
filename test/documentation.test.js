@@ -18,7 +18,7 @@ function escapeRegex(text) {
 }
 
 function markdownLinkPattern(file) {
-  return new RegExp(`\\]\\(\\./${escapeRegex(normalize(file))}\\)`);
+  return new RegExp(`\\]\\(\\./${escapeRegex(file)}\\)`, 'i');
 }
 
 test('documentation deliverables exist at repository root', () => {
@@ -30,7 +30,19 @@ test('documentation deliverables exist at repository root', () => {
 test('README describes the South Morocco travel-planning focus and linked docs', () => {
   const readme = normalize(read('README.md'));
 
-  for (const commandOrEndpointPattern of [/npm start/i, /npm test/i, /\/api\/health/i, /\/api\/packages/i]) {
+  for (const commandOrEndpointPattern of [
+    /npm start/i,
+    /npm test/i,
+    /\/api\/health/i,
+    /\/api\/packages/i,
+    /\/api\/testimonials/i,
+    /\/api\/social-links/i,
+    /\/api\/customers/i,
+    /\/api\/bookings/i,
+    /\/api\/rooms/i,
+    /\/api\/services/i,
+    /\/api\/incidents/i
+  ]) {
     assert.match(readme, commandOrEndpointPattern);
   }
 

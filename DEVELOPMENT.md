@@ -149,10 +149,10 @@ Controleer na relevante wijzigingen:
 ## 9. Documentatieverplichtingen
 
 Werk deze bestanden bij wanneer de scope verandert:
-- `README.md` voor productpositionering en structuur
-- `ARCHITECTURE.md` voor technische keuzes
-- `DEVELOPMENT.md` voor workflow en developerafspraken
-- `DEPLOYMENT.md` voor hosting en operations
+- [`README.md`](./README.md) voor productpositionering en structuur
+- [`ARCHITECTURE.md`](./ARCHITECTURE.md) voor technische keuzes
+- [`DEVELOPMENT.md`](./DEVELOPMENT.md) voor workflow en developerafspraken
+- [`DEPLOYMENT.md`](./DEPLOYMENT.md) voor hosting en operations
 
 ## 10. Credits en context
 

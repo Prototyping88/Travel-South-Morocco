@@ -2,4 +2,6 @@
 
 Beschrijving van het dienstenpakket, de klantreis en aanvullende componenten zoals fietstrips.
 
-- Sectie 6: fietstrips als onderscheidend product binnen het aanbod.
+## 6. Fietstrips
+
+Fietstrips zijn een onderscheidend product binnen het aanbod en vormen een aparte operationele en commerciële component binnen de klantreis.

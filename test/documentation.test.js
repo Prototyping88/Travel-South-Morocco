@@ -77,9 +77,9 @@ test('architecture and developer docs retain Course2Go translation context', () 
   const development = normalize(read('DEVELOPMENT.md'));
   const deployment = normalize(read('DEPLOYMENT.md'));
 
-  for (const architecturePattern of [/(course2go|creator)/, /(reisdossier|itinerary|booking)/, /(api|endpoint)/]) {
-    assert.match(architecture, architecturePattern);
-  }
+  assert.match(architecture, /course2go/i);
+  assert.match(architecture, /(reisdossier|dossier)/i);
+  assert.match(architecture, /(api-oppervlak|api-interfaces|api)/i);
   for (const linkedDoc of ['README.md', 'DEVELOPMENT.md', 'DEPLOYMENT.md']) {
     assert.match(architecture, markdownLinkPattern(linkedDoc));
   }
@@ -93,6 +93,6 @@ test('architecture and developer docs retain Course2Go translation context', () 
   for (const linkedDoc of ['README.md', 'ARCHITECTURE.md', 'DEVELOPMENT.md']) {
     assert.match(deployment, markdownLinkPattern(linkedDoc));
   }
-  assert.match(deployment, /(course2go|workspace-gedreven architectuur)/);
+  assert.match(deployment, /course2go/i);
   assert.match(deployment, /(security|beveiliging)/);
 });

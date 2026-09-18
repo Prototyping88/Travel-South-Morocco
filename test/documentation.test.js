@@ -83,16 +83,16 @@ test('architecture and developer docs retain Course2Go translation context', () 
   for (const linkedDoc of ['README.md', 'DEVELOPMENT.md', 'DEPLOYMENT.md']) {
     assert.match(architecture, markdownLinkPattern(linkedDoc));
   }
-  for (const developmentPattern of [/(zuid-marokko|travel south morocco)/, /(testen|node:test|npm test)/]) {
+  for (const developmentPattern of [/(zuid-marokko|travel south morocco)/i, /(testen|node:test|npm test)/i]) {
     assert.match(development, developmentPattern);
   }
   for (const linkedDoc of ['README.md', 'ARCHITECTURE.md', 'DEPLOYMENT.md']) {
     assert.match(development, markdownLinkPattern(linkedDoc));
   }
-  assert.match(deployment, /(productie|deployment|hosting)/);
+  assert.match(deployment, /(productie|deployment|hosting)/i);
   for (const linkedDoc of ['README.md', 'ARCHITECTURE.md', 'DEVELOPMENT.md']) {
     assert.match(deployment, markdownLinkPattern(linkedDoc));
   }
   assert.match(deployment, /course2go/i);
-  assert.match(deployment, /(security|beveiliging)/);
+  assert.match(deployment, /(security|beveiliging)/i);
 });

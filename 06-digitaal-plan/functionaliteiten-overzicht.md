@@ -1,3 +1,5 @@
+# Functionaliteitenoverzicht
+
 Overzicht van functionaliteiten, gegroepeerd naar zes domeinen met fase-indicatie (Pilot = snel op te zetten, Opschaling = pas nodig bij groter volume).
 
 ## 1. Online reclame & marketing

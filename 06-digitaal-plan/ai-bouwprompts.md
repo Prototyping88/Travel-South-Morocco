@@ -1,3 +1,5 @@
+# AI-bouwprompts
+
 Twee AI-prompts voor de gefaseerde uitwerking van het digitale traject.
 
 ## Stap 1 — voor GitHub Copilot (architectuur)

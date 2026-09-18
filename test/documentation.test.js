@@ -13,8 +13,12 @@ function normalize(text) {
   return text.toLowerCase();
 }
 
+function escapeRegex(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function markdownLinkPattern(file) {
-  return new RegExp(`\\]\\(\\./${normalize(file).replace('.', '\\.')}\\)`);
+  return new RegExp(`\\]\\(\\./${escapeRegex(normalize(file))}\\)`);
 }
 
 test('documentation deliverables exist at repository root', () => {
@@ -26,8 +30,8 @@ test('documentation deliverables exist at repository root', () => {
 test('README describes the South Morocco travel-planning focus and linked docs', () => {
   const readme = normalize(read('README.md'));
 
-  for (const commandOrEndpoint of ['npm start', 'npm test', '/api/health', '/api/packages']) {
-    assert.ok(readme.includes(commandOrEndpoint), `README should mention ${commandOrEndpoint}`);
+  for (const commandOrEndpointPattern of [/npm start/i, /npm test/i, /\/api\/health/i, /\/api\/packages/i]) {
+    assert.match(readme, commandOrEndpointPattern);
   }
 
   for (const topicPattern of [

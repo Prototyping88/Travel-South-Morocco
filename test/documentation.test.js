@@ -71,17 +71,17 @@ test('architecture and developer docs retain Course2Go translation context', () 
   for (const architecturePattern of [/(course2go|creator)/, /(reisdossier|itinerary|booking)/, /(api|endpoint)/]) {
     assert.match(architecture, architecturePattern);
   }
-  for (const linkedDoc of ['DEVELOPMENT.md', 'DEPLOYMENT.md']) {
+  for (const linkedDoc of ['README.md', 'DEVELOPMENT.md', 'DEPLOYMENT.md']) {
     assert.match(architecture, markdownLinkPattern(linkedDoc));
   }
   for (const developmentPattern of [/(zuid-marokko|travel south morocco)/, /(testen|node:test|npm test)/]) {
     assert.match(development, developmentPattern);
   }
-  for (const linkedDoc of ['README.md', 'ARCHITECTURE.md']) {
+  for (const linkedDoc of ['README.md', 'ARCHITECTURE.md', 'DEPLOYMENT.md']) {
     assert.match(development, markdownLinkPattern(linkedDoc));
   }
   assert.match(deployment, /(productie|deployment|hosting)/);
-  for (const linkedDoc of ['README.md', 'ARCHITECTURE.md']) {
+  for (const linkedDoc of ['README.md', 'ARCHITECTURE.md', 'DEVELOPMENT.md']) {
     assert.match(deployment, markdownLinkPattern(linkedDoc));
   }
   assert.match(deployment, /(security|beveiliging)/);

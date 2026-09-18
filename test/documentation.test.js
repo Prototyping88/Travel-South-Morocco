@@ -36,6 +36,15 @@ test('architecture and developer docs retain Course2Go translation context', () 
 
   assert.match(architecture, /Course2Go/i);
   assert.match(architecture, /reisdossier/i);
+  assert.match(architecture, /DEVELOPMENT\.md/);
+  assert.match(architecture, /DEPLOYMENT\.md/);
+  assert.match(architecture, /API-oppervlak/i);
   assert.match(development, /Zuid-Marokko/i);
+  assert.match(development, /README\.md/);
+  assert.match(development, /ARCHITECTURE\.md/);
+  assert.match(development, /Testen/i);
   assert.match(deployment, /productie/i);
+  assert.match(deployment, /README\.md/);
+  assert.match(deployment, /ARCHITECTURE\.md/);
+  assert.match(deployment, /Security-hardening/i);
 });
